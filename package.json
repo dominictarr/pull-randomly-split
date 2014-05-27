@@ -1,0 +1,20 @@
+{
+  "name": "pull-randomly-split",
+  "description": "split incomming buffers randomly, to test parsers",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dominictarr/pull-randomly-split",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dominictarr/pull-randomly-split.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tape": "~2.3.3",
+    "pull-stream": "~2.23.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Dominic Tarr <dominic.tarr@gmail.com> (http://dominictarr.com)",
+  "license": "MIT"
+}
