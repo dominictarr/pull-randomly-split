@@ -26,4 +26,24 @@ tape('simple', function (t) {
 
 })
 
+tape('defaults', function (t) {
+
+  pull(
+    pull.values([bytes]),
+    random(),
+    pull.through(function (e) {
+      console.log(e.length)
+    }),
+    pull.collect(function (err, ary) {
+
+      t.equal(Buffer.concat(ary).length, bytes.length)
+      t.equal(Buffer.concat(ary).toString('hex'), bytes.toString('hex'))
+      t.deepEqual(Buffer.concat(ary).toJSON(), bytes.toJSON())
+      t.end()
+
+    })
+  )
+
+})
+
 
