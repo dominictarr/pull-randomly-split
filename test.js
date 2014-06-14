@@ -18,7 +18,7 @@ tape('simple', function (t) {
 
       t.equal(Buffer.concat(ary).length, bytes.length)
       t.equal(Buffer.concat(ary).toString('hex'), bytes.toString('hex'))
-      t.deepEqual(Buffer.concat(ary), bytes)
+      t.deepEqual(Buffer.concat(ary).toJSON(), bytes.toJSON())
       t.end()
 
     })
