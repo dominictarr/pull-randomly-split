@@ -3,7 +3,7 @@
 //ball/bite (roll into ball, take a bite)
 
 module.exports = function (min, max) {
-  min = min || 0
+  min = min || 1
   max = max || Infinity
   var buffer = new Buffer(0), ended
   function bite () {
