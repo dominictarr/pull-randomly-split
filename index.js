@@ -16,11 +16,9 @@ module.exports = function (min, max) {
   return function (read) {
     return function (abort, cb) {
       if(abort) return read(abort, cb)
-      if(ended) {
-        if(buffer.length) cb(null, bite())
-        else              cb(ended)
-        return
-      }
+      if(buffer.length) return cb(null, bite())
+      if(ended)         return cb(ended)
+
       read(null, function (end, data) {
         if(end) {
           ended = end
