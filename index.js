@@ -22,8 +22,7 @@ module.exports = function (min, max) {
       read(null, function (end, data) {
         if(end) {
           ended = end
-          if(buffer.length)
-            return cb(null, bite())
+          if(buffer.length) return cb(null, bite())
           return cb(ended)
         }
         //copy twice, this isn't efficient,
