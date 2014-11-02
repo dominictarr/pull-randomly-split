@@ -2,6 +2,10 @@
 //I suspect that this could be generalized to a reduce/unreduc
 //ball/bite (roll into ball, take a bite)
 
+function isString(s) {
+  return 'string' === typeof s
+}
+
 module.exports = function (min, max) {
   min = min || 1
   max = max || Infinity
@@ -20,6 +24,8 @@ module.exports = function (min, max) {
       if(ended)         return cb(ended)
 
       read(null, function (end, data) {
+        if(isString(data)) data = new Buffer(data)
+
         if(end) {
           ended = end
           if(buffer.length) return cb(null, bite())
