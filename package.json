@@ -1,7 +1,7 @@
 {
   "name": "pull-randomly-split",
   "description": "split incomming buffers randomly, to test parsers",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "homepage": "https://github.com/dominictarr/pull-randomly-split",
   "repository": {
     "type": "git",
